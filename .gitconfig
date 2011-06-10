@@ -1,0 +1,21 @@
+[user]
+	name = Sky Faber
+	email = skyf@alleninstitute.org
+[color]
+	ui = auto
+[advice]
+	pushNonFastForward = false
+[core]
+	whitespace = trailing-space,space-before-tab
+	excludesfile = /home/skyf/.gitignore
+[diff]
+	renames = copies
+	mnemonicprefix = true
+[branch]
+	autosetupmerge = true
+[push]
+	default = tracking
+[rerere]
+	enabled = true
+[merge]
+	stat = true
