@@ -12,6 +12,8 @@
 #}
 #IRB.conf[:PROMPT_MODE] = :CUSTOM
 
+require 'win32/console/ansi'
+require 'fileutils'
 
 begin
   # load wirble
@@ -24,3 +26,16 @@ rescue LoadError => err
   warn "Couldn't load Wirble: #{err}"
 end
 
+
+def ls
+  Dir["**"]
+end
+
+def cd dir
+  FileUtils.cd dir
+  FileUtils.pwd
+end
+
+def pwd
+  FileUtils.pwd
+end
