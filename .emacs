@@ -22,10 +22,12 @@
 (global-set-key (kbd "M--") 'shrink-window)
 (global-set-key (kbd "M-=") 'enlarge-window)
 
-(global-set-key (kbd "M-u") 'undo)
+(global-set-key (kbd "M-u") 'undo) 
 
-(tool-bar-mode -1)
-(menu-bar-mode -1)
+(global-set-key (kbd "M-SPC") 'set-mark-command)
+
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on) 
+
 
 ;;BEGIN RUBY-MODE
 ;; turn on font-lock mode
@@ -44,6 +46,9 @@
 (load-library "p4")
 ;
 
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
 (when window-system
   ;; enable wheelmouse support by default
   (mwheel-install)
@@ -59,6 +64,7 @@
  (add-to-list 'auto-mode-alist '("\\Rakefile$" . ruby-mode))
  (add-to-list 'auto-mode-alist '("\\.rakefile$" . ruby-mode))
  (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
+ (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
  (add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
  (autoload 'run-ruby "inf-ruby"
      "Run an inferior Ruby process")
@@ -131,6 +137,11 @@
 (global-set-key (kbd "C-c <up>") 'windmove-up)
 (global-set-key (kbd "C-c <down>") 'windmove-down)
 
+(global-set-key (kbd "C-c b") 'windmove-left)
+(global-set-key (kbd "C-c f") 'windmove-right)
+(global-set-key (kbd "C-c p") 'windmove-up)
+(global-set-key (kbd "C-c n") 'windmove-down)
+
 
 ;BEGIN RHTML MODE
 (defface erb-face
@@ -154,7 +165,7 @@
 ;;BEGIN RINARI
 (require 'ido)
 (ido-mode t)
-(global-set-key (kbd "C-f") 'ido-find-file)
+(global-set-key (kbd "C-g") 'ido-find-file)
 (setq rinari-tags-file-name "TAGS")
 ;;END RINARI
 ;;BEGIN Ruby flymake
@@ -177,29 +188,19 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
-
-
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
-
 ;; rvm
 
 ;;(require `rvm)
 ;;(rvm-use-default) ;; use rvm.s default ruby for the current Emacs session
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((encoding . utf-8)))))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
