@@ -25,6 +25,12 @@
 (global-set-key (kbd "M-u") 'undo) 
 
 (global-set-key (kbd "M-SPC") 'set-mark-command)
+(global-set-key (kbd "C-v") `keyboard-escape-quit)
+
+(defun colorize-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+  (toggle-read-only))
 
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on) 
 
@@ -169,13 +175,13 @@
 (setq rinari-tags-file-name "TAGS")
 ;;END RINARI
 ;;BEGIN Ruby flymake
-(require 'flymake-ruby)
-(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+;(require 'flymake-ruby)
+;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
 ;; I don't like the default colors :)
-(require 'flymake)
-(set-face-background 'flymake-errline "red4")
-(set-face-background 'flymake-warnline "dark slate blue")
+;(require 'flymake)
+;(set-face-background 'flymake-errline "red4")
+;(set-face-background 'flymake-warnline "dark slate blue")
 ;;END flymake-ruby
 
 ;;; This was installed by package-install.el.
@@ -189,6 +195,9 @@
   (package-initialize))
 
 ;; rvm
+
+
+
 
 ;;(require `rvm)
 ;;(rvm-use-default) ;; use rvm.s default ruby for the current Emacs session
