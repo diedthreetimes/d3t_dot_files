@@ -47,9 +47,9 @@
 ;; stop at the end of the file, not just add lines
 (setq next-line-add-newlines nil)
 
-;p4
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
-(load-library "p4")
+;;p4
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp")
+;;(load-library "p4")
 ;
 
 (tool-bar-mode -1)
@@ -206,6 +206,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
  '(safe-local-variable-values (quote ((encoding . utf-8)))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
