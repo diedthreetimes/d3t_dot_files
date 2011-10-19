@@ -52,6 +52,9 @@ tramp
 .rvm
 .sage
 .sok
+.compiz-1/
+.hplip/
+.ido.last
 Downloads/
 Documents/
 Desktop/
@@ -62,5 +65,6 @@ Public/
 repos/
 Templates/
 Ubuntu\ One/
+Code/
 Videos/
 .profile
