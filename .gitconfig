@@ -7,7 +7,7 @@
 	pushNonFastForward = false
 [core]
 	whitespace = trailing-space,space-before-tab
-	excludesfile = /home/skyf/.gitignore
+	excludesfile = /home/sky/.gitignore
 [diff]
 	renames = copies
 	mnemonicprefix = true
