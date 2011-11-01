@@ -12,6 +12,7 @@
 (global-set-key [f4] 'goto-line)
 (global-set-key [f3] 'shell)
 (global-set-key [f5] 'switch-to-buffer)
+(global-set-key (kbd "C-q") 'switch-to-buffer)
 (global-set-key [f6] 'query-replace)
 (global-set-key [f8] 'hippie-expand)
 (global-set-key [f7] 'ispell)
