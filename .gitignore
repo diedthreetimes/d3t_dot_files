@@ -74,3 +74,9 @@ Videos/
 .pry_history
 .smb/
 .xprofile
+.gegl-0.0/
+.gimp-2.6/
+.irb-history
+.matlab/
+Installs/
+R/
