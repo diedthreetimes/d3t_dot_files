@@ -5,6 +5,7 @@
 .elc
 auto-save-list
 tramp
+.MakeMKV/
 .ssh/
 .speech-dispatcher
 .sudo_as_admin_successful
