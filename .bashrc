@@ -26,7 +26,6 @@ PS1="\W\$(parse_git_branch)${BASH_WHITE}\$ ";
 export LS_COLORS='di=01;33'
 
 # User specific aliases and functions
-alias em="emacs -nw"
 alias b="bundle"
 alias bi="bundle install"
 alias be="bundle exec"

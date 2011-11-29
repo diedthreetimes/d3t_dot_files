@@ -81,3 +81,9 @@ Videos/
 .matlab/
 Installs/
 R/
+.designer/
+.icedtea/
+.indicator-sysmonitor.json
+.lesshst
+.minecraft/
+matlab*
