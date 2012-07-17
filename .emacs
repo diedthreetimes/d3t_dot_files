@@ -3,6 +3,7 @@
 ;; Set up the keyboard so the delete key on both the regular keyboard
 ;; and the keypad delete the character under the cursor and to the right
 ;; under X, instead of the default, backspace behavior.
+
 (setq tab-width 2)
 (setq c-basic-offset 2)
 
@@ -64,7 +65,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/ruby")
 
- (autoload 'ruby-mode "ruby-mode"
+(autoload 'ruby-mode "ruby-mode"
      "Mode for editing ruby source files")
  (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
  (add-to-list 'auto-mode-alist '("\\.ctl$" . ruby-mode))
@@ -215,3 +216,24 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  )
+
+
+; Used for dvi access
+;(server-start)
+
+;; Used for latex autocomplete functionality
+(add-to-list 'load-path "~/.emacs.d/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+
+
+(require 'auto-complete-latex)
+(setq ac-l-dict-directory "~/.emacs.d/ac-l-dict/")
+(add-to-list 'ac-modes 'LaTeX-mode)
+(add-to-list 'ac-modes 'tex-mode)
+(add-to-list 'ac-modes 'latex-mode) ; important one
+(add-to-list 'ac-modes 'TeX-mode)
+
+(add-hook 'LaTeX-mode-hook 'ac-l-setup)
+; END latex autocomplete
