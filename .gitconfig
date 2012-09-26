@@ -19,3 +19,5 @@
 	enabled = true
 [merge]
 	stat = true
+[http]
+	sslverify = false
