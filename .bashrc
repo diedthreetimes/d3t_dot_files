@@ -33,8 +33,12 @@ alias g="git"
 alias cml="em CMakeLists.txt"
 
 alias f="find . | xargs grep"
+alias p="pushd"
+alias o="popd"
+alias op="gnome-open"
+alias grep="grep --color=auto"
 
-PATH=/local1/git/bin:/local1/emacs-v23.3/bin:$PATH
+PATH=/local1/git/bin:/local1/emacs-v23.3/bin:/usr/local/texlive/2011/bin/x86_64-linux:/opt/android-sdk-linux/platform-tools:$PATH 
 export PATH
 
 export EDITOR=em
