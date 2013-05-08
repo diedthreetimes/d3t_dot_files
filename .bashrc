@@ -37,7 +37,12 @@ alias f="find . | xargs grep"
 PATH=/local1/git/bin:/local1/emacs-v23.3/bin:$PATH
 export PATH
 
+export PATH=${PATH}:~/Installs/android-sdk-linux/tools
+export PATH=${PATH}:~/Installs/android-sdk-linux/platform-tools
+
 export EDITOR=em
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
