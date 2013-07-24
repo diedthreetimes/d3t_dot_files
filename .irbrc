@@ -56,5 +56,6 @@ end
 require "rubygems"
 require 'pry'
 Pry.start
+Pry.config.pager = false
 exit
 

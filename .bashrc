@@ -41,6 +41,9 @@ alias grep="grep --color=auto"
 PATH=/local1/git/bin:/local1/emacs-v23.3/bin:/usr/local/texlive/2011/bin/x86_64-linux:/opt/android-sdk-linux/platform-tools:$PATH 
 export PATH
 
+export PATH=${PATH}:~/Installs/android-sdk-linux/tools
+export PATH=${PATH}:~/Installs/android-sdk-linux/platform-tools
+
 export EDITOR=em
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.

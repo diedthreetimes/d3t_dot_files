@@ -1,0 +1,4 @@
+# Add us-alt to /usr/share/X11/xkb/symbols/
+
+$ sudo cp evdev.xml /usr/share/X11/xkb/rules/
+
