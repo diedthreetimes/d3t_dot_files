@@ -36,11 +36,12 @@ def convert_ms ms
   ms = ms % 1000
 
   ret ||= ""
-  ret += "#{days} days " if days > 0
-  ret += "#{hours} hours " if hours > 0
-  ret += "#{minutes} min. " if hours == 0 and minutes > 0
-  ret += "#{seconds}s " if hours == 0 and seconds > 0
-  ret += "#{ms.round(3)}ms" if minutes == 0
+  ret += "#{days}days " if days > 0
+  ret += "#{hours}hours " if hours > 0
+  ret += "#{minutes}min. " if days == 0 and minutes > 0
+  ret += "#{seconds}.#{ms.round(-1)/10}s " if hours == 0 and seconds > 0 and minutes == 0
+  ret += "#{seconds}s " if hours == 0 and seconds > 0 and minutes != 0
+  ret += "#{ms.round(2)}ms" if seconds == 0
 
   ret
 end
@@ -52,6 +53,12 @@ times.each {|k,v|
   times[k] = times[k].flatten
 }
 
+times[10**8] = times[10**7].collect{|x| x.to_f * 10}
+times[10**9] = times[10**8].collect{|x| x * 10}
+times[3*10**9] = times[10**9].collect{|x| x * 3}
+
+
+
 times.each {|k,v|
   times[k].collect!{ |x| convert_ms(x) }
 }
@@ -61,5 +68,5 @@ times.each {|k,v|
 }
 
 times.each {|k,v|
-  puts "$10^#{Math.log(k.to_i, 10).to_i}$ & #{v.join(' & ')}\\\\ \\hline"
+  puts "$10^#{Math.log(k.to_i, 10).round}$ & #{v.join(' & ')}\\\\ \\hline"
 }
