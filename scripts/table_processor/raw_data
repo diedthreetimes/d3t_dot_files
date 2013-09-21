@@ -1,0 +1,275 @@
+# IG Tests
+# Basic Optimizations
+# %1
+# Running with 10,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.26 milli seconds
+# Match Not Found!
+# Online time: 0.364 milli seconds
+# Running with 100,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.254 milli seconds
+# Match Not Found!
+# Online time: 3.174 milli seconds
+# Running with 1000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.258 milli seconds
+# Match Not Found!
+# Online time: 20.146 milli seconds
+# Running with 10000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.103 milli seconds
+# Match Not Found!
+# Online time: 127.836 milli seconds
+# Running with 100000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.197 milli seconds
+# Match Not Found!
+# Online time: 1277.42 milli seconds
+# Running with 1000000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.106 milli seconds
+# Match Not Found!
+# Online time: 12735.2 milli seconds
+# Running with 10000000
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 0.115 milli seconds
+# Match Not Found!
+# Online time: 128422 milli seconds
+
+# No Optimization
+%0
+Running with 10,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 0.762 milli seconds
+Running with 100,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 4.51 milli seconds
+Running with 1000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 28.721 milli seconds
+Running with 10000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 291.119 milli seconds
+Running with 100000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 2856.79 milli seconds
+Running with 1000000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 28608.1 milli seconds
+Running with 10000000
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 285779 milli seconds
+
+# Mult Only
+%1
+Running with 10,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 0.463 milli seconds
+Match Not Found!
+Online time: 0.099 milli seconds
+Running with 100,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 4.049 milli seconds
+Match Not Found!
+Online time: 0.218 milli seconds
+Running with 1000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 20.353 milli seconds
+Match Not Found!
+Online time: 0.677 milli seconds
+Running with 10000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 168.275 milli seconds
+Match Not Found!
+Online time: 6.02 milli seconds
+Running with 100000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 1634.44 milli seconds
+Match Not Found!
+Online time: 60.179 milli seconds
+Running with 1000000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 16091.4 milli seconds
+Match Not Found!
+Online time: 647.048 milli seconds
+Running with 10000000
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 161347 milli seconds
+Match Not Found!
+Online time: 6253.84 milli seconds
+
+# EC Tests
+# Basic Optimizations
+# %2
+# Running with 10,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 1.649 milli seconds
+# Match Not Found!
+# Online time: 3.421 milli seconds
+# Running with 100,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 4.002 milli seconds
+# Match Not Found!
+# Online time: 38.724 milli seconds
+# Running with 1000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 1.988 milli seconds
+# Match Not Found!
+# Online time: 335.738 milli seconds
+# Running with 10000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 4.038 milli seconds
+# Match Not Found!
+# Online time: 3330.19 milli seconds
+# Running with 100000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 1.722 milli seconds
+# Match Not Found!
+# Online time: 33732.4 milli seconds
+# Running with 1000000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 1.922 milli seconds
+# Match Not Found!
+# Online time: 327842 milli seconds
+# Running with 10000000,
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 1.714 milli seconds
+# Match Not Found!
+# Online time: 3.25846e+06 milli seconds
+# Running with 100000000
+# No key knowledge optimization
+# Starting at postiion 9993
+# Pattern Preprocessing time: 1.661 milli seconds
+
+# No Optimizations
+%2
+Running with 10,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 12.707 milli seconds
+Running with 100,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 66.151 milli seconds
+Running with 1000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 635.991 milli seconds
+Running with 10000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 6407.93 milli seconds
+Running with 100000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 67321.7 milli seconds
+Running with 1000000,
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0 milli seconds
+Match Not Found!
+Online time: 635974 milli seconds
+Running with 10000000
+No optimization
+Starting at postiion 9993
+Pattern Preprocessing time: 0.001 milli seconds
+Match Not Found!
+Online time: 6.35209e+06 milli seconds
+
+# Mult Only
+%3
+Running with 10,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 7.054 milli seconds
+Match Not Found!
+Online time: 0.779 milli seconds
+Running with 100,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 36.897 milli seconds
+Match Not Found!
+Online time: 3.766 milli seconds
+Running with 1000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 317.619 milli seconds
+Match Not Found!
+Online time: 32.644 milli seconds
+Running with 10000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 3166.45 milli seconds
+Match Not Found!
+Online time: 318.651 milli seconds
+Running with 100000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 31950.3 milli seconds
+Match Not Found!
+Online time: 3278.88 milli seconds
+Running with 1000000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 317524 milli seconds
+Match Not Found!
+Online time: 31852.9 milli seconds
+Running with 10000000,
+Mult only for online phase
+Starting at postiion 9993
+Pattern Preprocessing time: 3.17538e+06 milli seconds
+Match Not Found!
+Online time: 319707 milli seconds

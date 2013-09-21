@@ -1,0 +1,9 @@
+# Run the following
+ssh -L 1234:dl.acm.org:8080 skyf@athena.ics.uci.edu -N
+
+# add this to /etc/hosts or just point the browser at localhost:1234 instead of dl.acm.org
+127.0.0.1       dl.acm.org:8080    localhost:1234
+
+
+# The above wasn't working instead we can also use SOCKS
+ssh -D 12345 skyf@athena.ics.uci.edu -N
