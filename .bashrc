@@ -4,6 +4,11 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+   . /etc/bash_completion
+fi
+
+
 BASH_NEWLINE="\n"
 BASH_GRAY="\[\e[1;30m\]"
 BASH_LIGHT_GREEN="\[\e[1;32m\]"
@@ -20,7 +25,7 @@ function parse_git_branch {
 
 
 
-PS1="\W\$(parse_git_branch)${BASH_WHITE}\$ ";
+PS1="\W${BASH_LIGHT_GREEN}\$(parse_git_branch)${BASH_WHITE}\$ ";
 
 # Fix LS colors
 export LS_COLORS='di=01;33'
@@ -37,6 +42,7 @@ alias p="pushd"
 alias o="popd"
 alias op="gnome-open"
 alias grep="grep --color=auto"
+alias ll="ls --color"
 
 PATH=/local1/git/bin:/local1/emacs-v23.3/bin:/usr/local/texlive/2011/bin/x86_64-linux:/opt/android-sdk-linux/platform-tools:$PATH 
 export PATH
@@ -50,3 +56,4 @@ export EDITOR=em
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export WORKON_HOME=/home/skyf/Documents/pyenvs

@@ -20,4 +20,6 @@
 [merge]
 	stat = true
 [http]
-	sslverify = false
+	sslverify = true
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
