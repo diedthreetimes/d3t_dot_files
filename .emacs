@@ -1,12 +1,18 @@
 ;; Red Hat Linux default .emacs initialization file  ; -*- mode: emacs-lisp -*-
 
-;; Set up the keyboard so the delete key on both the regular keyboard
-;; and the keypad delete the character under the cursor and to the right
-;; under X, instead of the default, backspace behavior.
+;; MAC OSX
+(setq mac-command-modifier 'control)
+(setq mac-option-modifier 'meta)
+(setq mac-control-modifier 'super)
+(set-keyboard-coding-system nil)
+;; The above works in the GUI emacs
 
 (setq tab-width 2)
 (setq c-basic-offset 2)
 
+;; Set up the keyboard so the delete key on both the regular keyboard
+;; and the keypad delete the character under the cursor and to the right
+;; under X, instead of the default, backspace behavior.
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
 
@@ -239,4 +245,9 @@
 
 (add-hook 'LaTeX-mode-hook 'ac-l-setup)
 ; END latex autocomplete
+
+; put cython files into python mode
+(require 'cython-mode)
+;;(setq auto-mode-alist  (cons '("\\.pyx$" . python-mode) auto-mode-alist))
+;;(setq auto-mode-alist  (cons '("\\.pxd$" . python-mode) auto-mode-alist))
 
