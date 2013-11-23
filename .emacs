@@ -60,7 +60,7 @@
 ;;(load-library "p4")
 ;
 
-(tool-bar-mode -1)
+;(tool-bar-mode -1)
 (menu-bar-mode -1)
 
 (when window-system
@@ -251,16 +251,17 @@
 ;;(setq auto-mode-alist  (cons '("\\.pyx$" . python-mode) auto-mode-alist))
 ;;(setq auto-mode-alist  (cons '("\\.pxd$" . python-mode) auto-mode-alist))
 
-(require 'xcscope)
-(define-key global-map [(ctrl f3)] 'cscope-set-initial-directory)
-(define-key global-map [(ctrl f4)] 'cscope-unset-initial-directory)
-(define-key global-map [(ctrl f5)] 'cscope-find-this-symbol)
-(define-key global-map [(ctrl f6)] 'cscope-find-global-definition)
-(define-key global-map [(ctrl f7)] 'cscope-find-global-definition-no-prompting)
-(define-key global-map [(ctrl f8)] 'cscope-pop-mark)
-(define-key global-map [(ctrl f9)] 'cscope-next-symbol)
-(define-key global-map [(ctrl f10)] 'cscope-next-file)
-(define-key global-map [(ctrl f11)] 'cscope-prev-symbol)
-(define-key global-map [(ctrl f12)] 'cscope-prev-file)
-(define-key global-map [(meta f9)] 'cscope-display-buffer)
-(define-key global-map [(meta f10)] 'cscope-display-buffer-toggle)
+;; TOOD: Enable this for MAC
+;(require 'xcscope)
+;(define-key global-map [(ctrl f3)] 'cscope-set-initial-directory)
+;(define-key global-map [(ctrl f4)] 'cscope-unset-initial-directory)
+;(define-key global-map [(ctrl f5)] 'cscope-find-this-symbol)
+;(define-key global-map [(ctrl f6)] 'cscope-find-global-definition)
+;(define-key global-map [(ctrl f7)] 'cscope-find-global-definition-no-prompting)
+;(define-key global-map [(ctrl f8)] 'cscope-pop-mark)
+;; (define-key global-map [(ctrl f9)] 'cscope-next-symbol)
+;; (define-key global-map [(ctrl f10)] 'cscope-next-file)
+;; (define-key global-map [(ctrl f11)] 'cscope-prev-symbol)
+;; (define-key global-map [(ctrl f12)] 'cscope-prev-file)
+;; (define-key global-map [(meta f9)] 'cscope-display-buffer)
+;; (define-key global-map [(meta f10)] 'cscope-display-buffer-toggle)

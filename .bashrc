@@ -42,7 +42,7 @@ alias p="pushd"
 alias o="popd"
 alias op="gnome-open"
 alias grep="grep --color=auto"
-alias ll="ls --color"
+alias ll="ls -G"
 
 PATH=/local1/git/bin:/local1/emacs-v23.3/bin:/usr/local/texlive/2011/bin/x86_64-linux:/opt/android-sdk-linux/platform-tools:$PATH 
 export PATH
