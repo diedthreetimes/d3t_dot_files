@@ -44,7 +44,7 @@ alias op="gnome-open"
 alias grep="grep --color=auto"
 alias ll="ls --color"
 
-PATH=/local1/git/bin:/local1/emacs-v23.3/bin:/usr/local/texlive/2011/bin/x86_64-linux:/opt/android-sdk-linux/platform-tools:$PATH 
+PATH=~/repos/arcanist/bin:/local1/git/bin:/local1/emacs-v23.3/bin:/usr/local/texlive/2011/bin/x86_64-linux:/opt/android-sdk-linux/platform-tools:$PATH 
 export PATH
 
 export PATH=${PATH}:~/Installs/android-sdk-linux/tools
@@ -57,3 +57,5 @@ export EDITOR=em
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export WORKON_HOME=/home/skyf/Documents/pyenvs
+
+source ~/repos/arcanist/resources/shell/bash-completion

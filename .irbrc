@@ -53,9 +53,9 @@ if defined?(::Bundler)
   end
 end
 # Use Pry everywhere
-require "rubygems"
-require 'pry'
-Pry.start
-Pry.config.pager = false
-exit
+#require "rubygems"
+#require 'pry'
+#Pry.start
+#Pry.config.pager = false
+#exit
 

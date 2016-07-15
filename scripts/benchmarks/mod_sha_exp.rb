@@ -4,7 +4,7 @@ require 'openssl'
 
 m = OpenSSL::BN.generate_prime(160)
 
-num_trials = 100000
+num_trials = 10000000
 time_exp = true
 time_hash = true
 
@@ -15,11 +15,11 @@ if time_exp
     a = rand(m).to_bn
     b = rand(m)
 
-    a.mod_exp(b,m)
+    a.mod_mul(b,m)
   end
   finish = Time.now
 
-  puts "Modular Exponentiation Takes: #{(finish-start)/num_trials}"
+  puts "Modular Multiplication Takes: #{(finish-start)/num_trials}"
 end
 
 if time_hash
