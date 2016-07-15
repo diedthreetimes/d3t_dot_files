@@ -217,8 +217,8 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
-(require 'coffee-mode)
+;(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+;(require 'coffee-mode)
 
 ; Used for dvi access
 ;(server-start)
@@ -253,3 +253,14 @@
 (define-key global-map [(ctrl f12)] 'cscope-prev-file)
 (define-key global-map [(meta f9)] 'cscope-display-buffer)
 (define-key global-map [(meta f10)] 'cscope-display-buffer-toggle)
+
+
+; auto-sudo for read-only files
+(defun find-file-sudo ()
+  "reabre el archivo actual, si existe, usando sudo"
+  (when (and buffer-file-name
+           (not (file-writable-p buffer-file-name))
+           (file-exists-p buffer-file-name))
+    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+    
+(add-hook 'find-file-hook 'find-file-sudo)
