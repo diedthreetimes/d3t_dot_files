@@ -8,6 +8,7 @@
 ;; The above works in the GUI emacs
 
 (setq tab-width 2)
+(setq js-indent-level 2)
 (setq c-basic-offset 2)
 
 ;; Set up the keyboard so the delete key on both the regular keyboard
@@ -197,10 +198,10 @@
 ;;; interfacing with ELPA, the package archive.
 ;;; Move this code earlier if you want to reference
 ;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
+;;(when
+;;    (load
+;;     (expand-file-name "~/.emacs.d/elpa/package.el"))
+;;  (package-initialize))
 
 ;; rvm
 
@@ -230,14 +231,13 @@
 ;(server-start)
 
 ;; Used for latex autocomplete functionality
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/autocomplete")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/autocomplete/ac-dict")
 (ac-config-default)
 
-
 (require 'auto-complete-latex)
-(setq ac-l-dict-directory "~/.emacs.d/ac-l-dict/")
+(setq ac-l-dict-directory "~/.emacs.d/autocomplete/ac-l-dict/")
 (add-to-list 'ac-modes 'LaTeX-mode)
 (add-to-list 'ac-modes 'tex-mode)
 (add-to-list 'ac-modes 'latex-mode) ; important one
@@ -246,10 +246,27 @@
 (add-hook 'LaTeX-mode-hook 'ac-l-setup)
 ; END latex autocomplete
 
+; JS MODE
+(setq auto-mode-alist  (cons '("\\.js$" . javascript-mode) auto-mode-alist))
+
+; org mode
+(setq auto-mode-alist  (cons '("\\.org$" . org-mode) auto-mode-alist))
+
 ; put cython files into python mode
+(add-to-list 'load-path "~/.emacs.d/cython")
 (require 'cython-mode)
 ;;(setq auto-mode-alist  (cons '("\\.pyx$" . python-mode) auto-mode-alist))
 ;;(setq auto-mode-alist  (cons '("\\.pxd$" . python-mode) auto-mode-alist))
+
+; go mode
+(add-to-list 'load-path "~/.emacs.d/go-mode")
+(require 'go-mode-autoloads)
+(add-hook 'go-mode-hook 
+  (lambda ()
+    (setq-default) 
+    (setq tab-width 2) 
+    (setq standard-indent 2) 
+    (setq indent-tabs-mode nil)))
 
 ;; TOOD: Enable this for MAC
 ;(require 'xcscope)
@@ -265,3 +282,9 @@
 ;; (define-key global-map [(ctrl f12)] 'cscope-prev-file)
 ;; (define-key global-map [(meta f9)] 'cscope-display-buffer)
 ;; (define-key global-map [(meta f10)] 'cscope-display-buffer-toggle)
+
+
+; tex redefenitions
+; compile with out \\nonstopmode and with --file-line-error
+(setq tex-start-commands "--file-line-error")
+; pdflatex --file-line-error \\input dissertation.tex

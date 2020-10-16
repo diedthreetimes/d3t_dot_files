@@ -159,8 +159,8 @@
 (if ruby-mode-map
     nil
   (setq ruby-mode-map (make-sparse-keymap))
-  (define-key ruby-mode-map "{" 'ruby-electric-brace)
-  (define-key ruby-mode-map "}" 'ruby-electric-brace)
+;  (define-key ruby-mode-map "{" 'ruby-electric-brace)
+;  (define-key ruby-mode-map "}" 'ruby-electric-brace)
   (define-key ruby-mode-map "\e\C-a" 'ruby-beginning-of-defun)
   (define-key ruby-mode-map "\e\C-e" 'ruby-end-of-defun)
   (define-key ruby-mode-map "\e\C-b" 'ruby-backward-sexp)
