@@ -268,6 +268,10 @@
     (setq standard-indent 2) 
     (setq indent-tabs-mode nil)))
 
+;; php mode
+(when (file-directory-p "~/.emacs.d/php-mode")
+  (load "~/.emacs.d/php-mode/php-mode-autoloads.el"))
+
 ;; TOOD: Enable this for MAC
 ;(require 'xcscope)
 ;(define-key global-map [(ctrl f3)] 'cscope-set-initial-directory)
